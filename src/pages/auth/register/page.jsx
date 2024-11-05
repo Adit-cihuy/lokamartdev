@@ -2,12 +2,14 @@ import React from 'react'
 import Header from '../../../components/layout/Header'
 import Footer from '../../../components/layout/Footer'
 import RegistrationCard from '../../../components/fragments/RegistrationCard'
+import { useNavigate } from 'react-router-dom'
 
 
 export default function Register() {
+  const navigate = useNavigate()
   return (
     <>
-      <Header />
+      <Header showSearch={false} />
       <main className="container mx-auto px-4 py-8">
         <div className="bg-white rounded-lg shadow-lg p-8">
           <h2 className="text-2xl font-bold text-red-500 mb-8">Daftar Sebagai</h2>
@@ -16,6 +18,7 @@ export default function Register() {
             {/* Left Side - Registration Options */}
             <div className="space-y-4">
               <RegistrationCard
+              onClick = {()=>navigate('/form-penjual')}
                 type="seller"
                 title="Mitra Sedjoaelan"
                 description="Jual dan Perkenalkan produk anda secara efisien ke Pemerintah dan Badan usaha lainnya"
@@ -27,6 +30,7 @@ export default function Register() {
                 }
               />
               <RegistrationCard
+              onClick = {()=>navigate('/form-pembeli')}
                 type="buyer"
                 title="Pembeli"
                 description="Nikmati berbagai layanan dengan harga murah dan proses yang mudah"
@@ -41,7 +45,7 @@ export default function Register() {
 
             {/* Right Side - Illustration */}
             <div className="flex flex-col items-center">
-              <img src="/api/placeholder/400/300" alt="UMKM Illustration" className="mb-6" />
+              <img src="D:/lokamart/src/assets/aset/aset/Since 2024.png" alt="UMKM Illustration" className="mb-6" />
               <div className="flex space-x-4 mb-4">
                 {[1, 2, 3, 4].map((i) => (
                   <img

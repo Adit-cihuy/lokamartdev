@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import lokamartLogo from 'D:/lokamart/src/assets/aset/aset/logo lokamart mini.png';
 
 export default function PagePembeli() {
     const [formData, setFormData] = useState({
@@ -32,11 +33,12 @@ export default function PagePembeli() {
     };
 
     return (
-        <div className="min-h-screen flex flex-col bg-gray-50">
-            {/* Logo Section */}
+        <div className="min-h-screen bg-gray-50">
+            {/* Logo */}
             <div className="flex justify-center py-8">
+                {/* Using placeholder image instead of direct import */}
                 <img
-                    src="/api/placeholder/200/80"
+                    src={lokamartLogo}
                     alt="Lokamart Logo"
                     className="h-16 object-contain"
                 />

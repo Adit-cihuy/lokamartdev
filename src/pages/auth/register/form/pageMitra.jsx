@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import lokamartLogo from 'D:/lokamart/src/assets/aset/aset/logo lokamart mini.png';
 
 export default function pageMitra() {
     const [formData, setFormData] = useState({
@@ -46,12 +47,15 @@ export default function pageMitra() {
     );
 
     return (
-        <div className="min-h-screen flex flex-col bg-gray-50">
-            {/* Logo Section */}
+        <div className="min-h-screen bg-gray-50">
+            {/* Logo */}
             <div className="flex justify-center py-8">
-                <div className="border-2 border-black bg-[#f5e6d3] px-6 py-2">
-                    <h1 className="text-2xl font-bold">LOKAMART</h1>
-                </div>
+                {/* Using placeholder image instead of direct import */}
+                <img
+                    src={lokamartLogo}
+                    alt="Lokamart Logo"
+                    className="h-16 object-contain"
+                />
             </div>
 
             {/* Registration Form */}

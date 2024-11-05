@@ -13,8 +13,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/form_pembeli" element={<PagePembeli />} />
-          <Route path="/form_penjual" element={<PageMitra />} />
+          <Route path="/form-pembeli" element={<PagePembeli />} />
+          <Route path="/form-penjual" element={<PageMitra />} />
         </Routes>
       </div>
     </Router>
